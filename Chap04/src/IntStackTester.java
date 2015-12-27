@@ -25,14 +25,28 @@ class IntStackTester {
 				}
 				break;
 
-			case 2:
+			case 2:							//ポップ
 				try{
 					x = s.pop();
 					System.out.println("ポップしたデータは"+x+"です");
+				}catch(IntStack.EmptyIntStackException e){
+					System.out.println("スタックが空です。");
 				}
+				break;
+				
+			case 3:
+				try{
+					x = s.peek();
+					System.out.println("ピークしたデータは"+x+"です。");
+				}catch(IntStack.EmptyIntStackException e){
+					System.out.println("スタックが空です。");
+				}
+				break;
+				
+			case 4:
+				s.dump();
+				break;
 			}
 		}
-
 	}
-
 }
